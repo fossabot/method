@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.github.ben-manes.versions") // Provides Dependencies Update Notice
 }
 
 kotlin {
