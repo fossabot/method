@@ -1,6 +1,13 @@
 plugins {
-    kotlin("multiplatform")
+    id("org.jetbrains.kotlin.multiplatform")
     id("com.android.library")
+    /** Tools **/
+    id("com.github.ben-manes.versions") // Dependency Update Notice
+    id("io.gitlab.arturbosch.detekt") // Code Analysis + Formatting
+}
+
+dependencies {
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0") // Code Formatting
 }
 
 kotlin {
@@ -20,7 +27,7 @@ kotlin {
         val commonMain by getting
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test"))
+                implementation("org.jetbrains.kotlin:kotlin-test:1.7.10")
             }
         }
         val androidMain by getting
