@@ -6,6 +6,10 @@ plugins {
     id("io.gitlab.arturbosch.detekt") // Code Analysis + Formatting
 }
 
+dependencies {
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0") // Code Formatting
+}
+
 kotlin {
     android()
     

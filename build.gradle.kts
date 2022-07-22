@@ -10,6 +10,7 @@ buildscript {
         /** Tools **/
         classpath("com.github.ben-manes:gradle-versions-plugin:0.42.0") // Dependency Update Notice
         classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0") // Code Analysis
+        classpath("org.jlleitschuh.gradle.ktlint:org.jlleitschuh.gradle.ktlint.gradle.plugin:10.3.0") // Code Analysis + Formatting
     }
 }
 
