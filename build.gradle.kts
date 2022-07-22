@@ -7,7 +7,9 @@ buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
         classpath("com.android.tools.build:gradle:7.2.1")
-        classpath("com.github.ben-manes:gradle-versions-plugin:0.42.0") // Provides Dependencies Update Notice
+        /** Tools **/
+        classpath("com.github.ben-manes:gradle-versions-plugin:0.42.0") // Dependency Update Notice
+        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0") // Code Analysis
     }
 }
 

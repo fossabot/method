@@ -1,7 +1,9 @@
 plugins {
-    kotlin("multiplatform")
+    id("org.jetbrains.kotlin.multiplatform")
     id("com.android.library")
-    id("com.github.ben-manes.versions") // Provides Dependencies Update Notice
+    /** Tools **/
+    id("com.github.ben-manes.versions") // Dependency Update Notice
+    id("io.gitlab.arturbosch.detekt") // Code Analysis + Formatting
 }
 
 kotlin {
@@ -21,7 +23,7 @@ kotlin {
         val commonMain by getting
         val commonTest by getting {
             dependencies {
-                implementation(kotlin("test"))
+                implementation("org.jetbrains.kotlin:kotlin-test:1.7.10")
             }
         }
         val androidMain by getting
