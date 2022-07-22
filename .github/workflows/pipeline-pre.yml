@@ -15,7 +15,7 @@ jobs:
 
   commit-check:
     name: Commit Check
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 #    if: ${{ !startsWith(github.event.head_commit.message, 'wip') }}
     steps:
       - name: Checking out repo.
