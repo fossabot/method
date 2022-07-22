@@ -1,0 +1,28 @@
+name: Develop Pipeline
+
+on:
+  push:
+    branches:
+      - dev
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  # CHECK
+
+  commit-check:
+    name: Commit Check
+    runs-on: self-hosted
+#    if: ${{ !startsWith(github.event.head_commit.message, 'wip') }}
+    steps:
+      - name: Checking out repo.
+        uses: actions/checkout@v3
+
+      - name: Setting up Gradle.
+        uses: ./.github/actions/setup
+
+      - name: Gradle check commit.
+        run: ./gradlew check
