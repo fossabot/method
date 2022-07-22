@@ -6,7 +6,7 @@ import ch.thipok.method.Greeting
 import android.widget.TextView
 
 fun greet(): String {
-    return Greeting().greeting()
+    return Greeting().sentence()
 }
 
 class MainActivity : AppCompatActivity() {

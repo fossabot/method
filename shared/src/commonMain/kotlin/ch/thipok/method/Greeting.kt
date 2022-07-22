@@ -1,7 +1,7 @@
 package ch.thipok.method
 
 class Greeting {
-    fun greeting(): String {
-        return "Hello, ${Platform().platform}!"
+    fun sentence(): String {
+        return "Hello, ${Platform().name}!"
     }
 }

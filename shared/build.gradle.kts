@@ -10,6 +10,14 @@ dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0") // Code Formatting
 }
 
+detekt {
+    source = files(
+        "src/androidMain/kotlin",
+        "src/commonMain/kotlin",
+        "src/iOSMain/kotlin",
+    )
+}
+
 kotlin {
     android()
     
