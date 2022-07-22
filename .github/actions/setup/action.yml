@@ -1,0 +1,28 @@
+name: Flutter Setup
+description: Setup Flutter for CI
+
+runs:
+  using: "composite"
+  steps:
+
+    # Github checkout is required to perform this action
+
+    - name: Validate Gradle Wrapper
+      uses: gradle/wrapper-validation-action@v1
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: temurin
+        java-version: 11
+
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+
+    # cache is automatically enabled for gradle
+
+    - name: Setup Git
+      shell: bash
+      run: |
+        git config --global user.email "noreply@github.com"
+        git config --global user.name "GitHub"
